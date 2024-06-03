@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "sauceless_stuff",
+	"version": "${version}",
+	"name": "sauceless-stuff",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/sauceless-stuff/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.sauceless.SaucelessStuff"
+		],
+		"client": [
+			"com.sauceless.SaucelessStuffClient"
+		],
+		"fabric-datagen": [
+          "com.sauceless.SaucelessStuffDataGenerator"
+		]
+	},
+	"mixins": [
+		"sauceless-stuff.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.21-",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
