@@ -1,6 +1,7 @@
 package com.sauceless.item;
 
 import com.sauceless.SaucelessStuff;
+import com.sauceless.block.ModBlocks;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -15,6 +16,7 @@ public class ModItemGroups {
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.sauceless"))
                     .icon(() -> new ItemStack(ModItems.COIN)).entries((displayContext, entries) -> {
                         entries.add(ModItems.COIN);
+                        entries.add(ModBlocks.YGH_BLOCK);
 
                     }).build());
     public static void registerItemGroup(){

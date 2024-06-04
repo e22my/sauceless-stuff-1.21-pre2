@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "sauceless_stuff:block/ygh_block"
+  }
+}
