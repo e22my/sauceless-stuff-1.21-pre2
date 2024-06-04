@@ -2,17 +2,17 @@
 	"schemaVersion": 1,
 	"id": "sauceless_stuff",
 	"version": "${version}",
-	"name": "sauceless-stuff",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "sauceless_stuff",
+	"description": "A mod to be solely used on the Sauceless Server",
 	"authors": [
-		"Me!"
+		"e22my"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "MIT",
-	"icon": "assets/sauceless-stuff/icon.png",
+	"icon": "assets/sauceless_stuff/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
@@ -26,7 +26,7 @@
 		]
 	},
 	"mixins": [
-		"sauceless-stuff.mixins.json"
+		"sauceless_stuff.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.15.11",
