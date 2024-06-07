@@ -17,6 +17,9 @@ public class ModItemGroups {
                     .icon(() -> new ItemStack(ModItems.COIN)).entries((displayContext, entries) -> {
                         entries.add(ModItems.COIN);
                         entries.add(ModBlocks.YGH_BLOCK);
+                        entries.add(ModItems.SAUCE);
+                        entries.add(ModItems.RARE_SAUCE);
+                        entries.add(ModItems.EPIC_SAUCE);
 
                     }).build());
     public static void registerItemGroup(){
