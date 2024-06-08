@@ -3,7 +3,10 @@ package com.sauceless.item.custom;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.item.tooltip.TooltipType;
+import net.minecraft.registry.entry.RegistryEntry;
+import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.Text;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
@@ -22,7 +25,7 @@ public class LootboxItem extends Item {
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand){
         ItemStack itemStack = user.getStackInHand(hand);
-        if (!world.isClient()){
+        if (!world.isClient() && user instanceof ServerPlayerEntity){
             open(user, world);
             if (!user.isCreative()){
                 itemStack.decrement(1);
@@ -33,6 +36,11 @@ public class LootboxItem extends Item {
     }
 
     public void open(PlayerEntity player, World world){
+        ItemStack diamond = new ItemStack(Items.DIAMOND);
+        boolean isAdded = player.giveItemStack(diamond);
+        if (!isAdded){
+            player.dropItem(diamond, false);
+        }
         //TO-DO: Figure out how to generate loot from custom loot table
     }
 
