@@ -11,10 +11,10 @@ import net.minecraft.world.World;
 
 import java.util.List;
 
-public class lootboxItem extends Item {
-    public lootType type;
+public class LootboxItem extends Item {
+    public LootType type;
 
-    public lootboxItem(Item.Settings settings, lootType type) {
+    public LootboxItem(Item.Settings settings, LootType type) {
         super(settings);
         this.type = type;
     }

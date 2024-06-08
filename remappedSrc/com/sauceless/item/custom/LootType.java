@@ -1,6 +1,6 @@
 package com.sauceless.item.custom;
 
-public enum lootType {
+public enum LootType {
     COMMON,
     RARE,
     EPIC
