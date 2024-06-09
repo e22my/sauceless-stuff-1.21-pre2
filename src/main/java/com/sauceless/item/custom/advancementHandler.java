@@ -11,7 +11,7 @@ public class advancementHandler {
         //OF ADVANCEMENTS WITH LOOK UP TABLE OF VARIABLE
         return progress;
     }
-    public void advancementCheck(ServerPlayerEntity player, AdvancementEntry advancement) {
-        player.getAdvancementTracker().getProgress(advancement).isDone();
+    public boolean advancementCheck(ServerPlayerEntity player, AdvancementEntry advancement) {
+        return player.getAdvancementTracker().getProgress(advancement).isDone();
     }
 }

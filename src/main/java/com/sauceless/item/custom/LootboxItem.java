@@ -1,11 +1,10 @@
 package com.sauceless.item.custom;
 
+import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.item.tooltip.TooltipType;
-import net.minecraft.network.message.MessageType;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.*;
 import net.minecraft.util.Hand;
@@ -26,7 +25,7 @@ public class LootboxItem extends Item {
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand){
         ItemStack itemStack = user.getStackInHand(hand);
         if (!world.isClient() && user instanceof ServerPlayerEntity){
-            open(user, world);
+            open(user);
             if (!user.isCreative()){
                 itemStack.decrement(1);
             }
@@ -35,21 +34,17 @@ public class LootboxItem extends Item {
         return TypedActionResult.fail(itemStack);
     }
 
-    public void open(PlayerEntity player, World world){
-        //CHANGE: Following line is temporary
-        //        Needs to call Loot Table Handler,
-        //        pass args+type and return List<ItemStack>
-        ItemStack loot = new ItemStack(Items.DIAMOND);
-
-        //Here -> Iterate through List and give Items to player
-
-        //Do not touch for now, gives player item and drops item
-        //if inventory full
-        boolean isAdded = player.giveItemStack(loot);
-        if (!isAdded){
-            player.dropItem(loot, false);
+    public void open(PlayerEntity player){
+        ObjectArrayList<ItemStack> generatedLoot =
+                LootTableHandler.getItemLoot((ServerPlayerEntity) player, type);
+        // For Advancement Check, Add function to remove advancement locked items
+        for (ItemStack entry : generatedLoot) {
+            boolean isAdded = player.giveItemStack(entry);
+            if (!isAdded){
+                player.dropItem(entry, false);
+            }
         }
-        player.sendMessage(Text.of(player.getName() + " opened " + type + " lootbox!"));
+        player.sendMessage(Text.literal(player.getName() + " opened " + type + " lootbox!"));
     }
 
     @Override
