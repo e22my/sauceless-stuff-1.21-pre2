@@ -1,5 +1,6 @@
 package com.sauceless.item.custom;
 
+import com.sauceless.SaucelessStuff;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import net.minecraft.item.ItemStack;
 import net.minecraft.loot.LootTable;
@@ -10,6 +11,7 @@ import net.minecraft.loot.context.LootContextTypes;
 import net.minecraft.registry.*;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.util.Identifier;
 
 public class LootTableHandler {
     // Loot Table Handler(LTH) is grabs correct loot table based on type
@@ -30,9 +32,9 @@ public class LootTableHandler {
     public static RegistryKey<LootTable> getLootType(LootType type){
         //This works but Add Custom Loot Tables
         return switch (type) {
-            case LootType.COMMON -> LootTables.BLACK_SHEEP_ENTITY;
-            case LootType.RARE -> LootTables.BASTION_BRIDGE_CHEST;
-            case LootType.EPIC -> LootTables.END_CITY_TREASURE_CHEST;
+            case LootType.COMMON -> RegistryKey.of(RegistryKeys.LOOT_TABLE, SaucelessStuff.id("lootbox/sauce"));
+            case LootType.RARE -> RegistryKey.of(RegistryKeys.LOOT_TABLE, SaucelessStuff.id("lootbox/rare_sauce"));
+            case LootType.EPIC -> RegistryKey.of(RegistryKeys.LOOT_TABLE, SaucelessStuff.id("lootbox/epic_sauce"));
         };
     }
 
