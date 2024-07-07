@@ -15,12 +15,9 @@ public class ModItemGroups {
             SaucelessStuff.id("sauceless"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.sauceless"))
                     .icon(() -> new ItemStack(ModItems.COIN)).entries((displayContext, entries) -> {
-                        entries.add(ModItems.COIN);
-                        entries.add(ModBlocks.YGH_BLOCK);
                         entries.add(ModItems.SAUCE);
                         entries.add(ModItems.RARE_SAUCE);
                         entries.add(ModItems.EPIC_SAUCE);
-
                     }).build());
     public static void registerItemGroup(){
         SaucelessStuff.LOGGER.info("Registering Item Groups for " + SaucelessStuff.MOD_ID);

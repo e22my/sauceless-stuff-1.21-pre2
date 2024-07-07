@@ -16,7 +16,7 @@ import java.util.List;
 public class LootboxItem extends Item {
     public LootType type;
 
-    public LootboxItem(Item.Settings settings, LootType type) {
+    public LootboxItem(Settings settings, LootType type) {
         super(settings);
         this.type = type;
     }
@@ -37,14 +37,20 @@ public class LootboxItem extends Item {
     public void open(PlayerEntity player){
         ObjectArrayList<ItemStack> generatedLoot =
                 LootTableHandler.getItemLoot((ServerPlayerEntity) player, type);
+
         // For Advancement Check, Add function to remove advancement locked items
+        advancementHandler handler = new advancementHandler();
+        if (handler.advancementProgress((ServerPlayerEntity) player) == 1){
+            player.sendMessage(Text.of(player.getName() + " has mined stone before!"));
+        };
+        player.sendMessage(Text.of(String.valueOf(handler.progress)));
         for (ItemStack entry : generatedLoot) {
             boolean isAdded = player.giveItemStack(entry);
             if (!isAdded){
                 player.dropItem(entry, false);
             }
         }
-        player.sendMessage(Text.literal(player.getName() + " opened " + type + " lootbox!"));
+        player.sendMessage(Text.of(player.getName() + " opened " + type + " lootbox!"));
     }
 
     @Override

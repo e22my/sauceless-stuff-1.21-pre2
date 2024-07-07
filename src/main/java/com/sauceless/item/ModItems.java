@@ -23,9 +23,6 @@ public class ModItems {
             new LootboxItem(new Item.Settings().maxCount(16).rarity(Rarity.EPIC),
                     LootType.EPIC));
 
-    private static void addToINGREDIENTSItemGroup(FabricItemGroupEntries entries){
-        entries.add(COIN);
-    }
     private static void addToFOODItemGroup(FabricItemGroupEntries entries){
 
         entries.add(SAUCE);
@@ -37,7 +34,6 @@ public class ModItems {
     }
     public static void registerModItems(){
         SaucelessStuff.LOGGER.info("Registering Mod Items for: " + SaucelessStuff.MOD_ID);
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(ModItems::addToINGREDIENTSItemGroup);
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(ModItems::addToFOODItemGroup);
     }
 }
