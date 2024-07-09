@@ -39,3 +39,4 @@ replay_*.log
 *.hprof
 *.jfr
 /src/main/resources/assets/sauceless_stuff/
+/src/main/java/com/sauceless/item/lootbox/lootboxMsg.java
