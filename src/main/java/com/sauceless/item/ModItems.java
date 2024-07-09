@@ -1,8 +1,8 @@
 package com.sauceless.item;
 
 import com.sauceless.SaucelessStuff;
-import com.sauceless.item.custom.LootType;
-import com.sauceless.item.custom.LootboxItem;
+import com.sauceless.item.lootbox.LootType;
+import com.sauceless.item.lootbox.LootboxItem;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;

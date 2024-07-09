@@ -11,8 +11,9 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 
 public class ModBlocks {
-    public static final Block YGH_BLOCK = registerBlock("ygh_block",
-            new Block(AbstractBlock.Settings.copy(Blocks.IRON_BLOCK)));
+//    public static final Block YGH_BLOCK = registerBlock("ygh_block",
+//            new Block(AbstractBlock.Settings.copy(Blocks.IRON_BLOCK)));
+
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, SaucelessStuff.id(name), block);

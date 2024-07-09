@@ -1,12 +1,10 @@
 {
   "item.sauceless_stuff.coin": "Coin",
-  "block.sauceless_stuff.ygh_block": "YGH Block",
 
   "item.sauceless_stuff.sauce": "Good Quality Sauce",
   "item.sauceless_stuff.rare_sauce": "Great Quality Sauce",
   "item.sauceless_stuff.epic_sauce": "Artisan Quality Sauce",
-  "tooltip.sauceless_stuff.lootbox.tooltip": "Right-click to Open",
-
+  "tooltip.sauceless_stuff.lootbox.tooltip": "Sauce Jar: Right-click to Open",
 
   "itemgroup.sauceless": "Sauceless Items"
 }

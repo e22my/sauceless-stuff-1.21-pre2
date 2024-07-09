@@ -1,4 +1,4 @@
-package com.sauceless.item.custom;
+package com.sauceless.item.lootbox;
 
 public enum LootType {
     COMMON,

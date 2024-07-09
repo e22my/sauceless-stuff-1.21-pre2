@@ -1,4 +1,4 @@
-package com.sauceless.item.custom;
+package com.sauceless.item.lootbox;
 
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.server.network.ServerPlayerEntity;
