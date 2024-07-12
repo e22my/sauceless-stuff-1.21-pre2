@@ -4,7 +4,16 @@
   "item.sauceless_stuff.sauce": "Good Quality Sauce",
   "item.sauceless_stuff.rare_sauce": "Great Quality Sauce",
   "item.sauceless_stuff.epic_sauce": "Artisan Quality Sauce",
+  "item.sauceless_stuff.sunraku": "Staring Bird Mask",
+  "item.sauceless_stuff.krichigo": "Kamen Rider Ichigo Helmet",
+  "item.sauceless_stuff.tartaglia": "Tartaglia(Childe)'s Mask",
+  "item.sauceless_stuff.steve": "The Helmet of Schizophrenia",
+  "item.sauceless_stuff.loki": "Loki's Helm",
+
   "tooltip.sauceless_stuff.lootbox.tooltip": "Sauce Jar: Right-click to Open",
+  "subtitles.sauceless_stuff.common": "Common Loot",
+  "subtitles.sauceless_stuff.rare": "Rare Loot",
+  "subtitles.sauceless_stuff.epic": "Epic Loot",
 
   "itemgroup.sauceless": "Sauceless Items"
 }

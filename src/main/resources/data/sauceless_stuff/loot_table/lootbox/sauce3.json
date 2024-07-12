@@ -1,0 +1,223 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "sauceless_stuff:lootbox/sauce2",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:totem_of_undying",
+          "weight": 4
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "target": "custom_name",
+              "name": {
+                "text": "-Greater Potion of Haste-",
+                "color": "gold",
+                "bold": true,
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:potion_contents": {
+                  "custom_color": 16365877,
+                  "custom_effects": [
+                    {
+                      "id": "minecraft:haste",
+                      "amplifier": 2,
+                      "duration": 12000
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "Tastes like AMERICA, RAAA",
+                  "color": "aqua",
+                  "italic": false
+                }
+              ],
+              "mode": "replace_all"
+            },
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "target": "custom_name",
+              "name": {
+                "text": "-Potion of Thunder-",
+                "color": "blue",
+                "bold": true,
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:potion_contents": {
+                  "custom_color": 3616255,
+                  "custom_effects": [
+                    {
+                      "id": "minecraft:strength",
+                      "amplifier": 2,
+                      "duration": 1200
+                    },
+                    {
+                      "id": "minecraft:resistance",
+                      "amplifier": 0,
+                      "duration": 1200
+                    },
+                    {
+                      "id": "minecraft:fire_resistance",
+                      "amplifier": 0,
+                      "duration": 1200
+                    },
+                    {
+                      "id": "minecraft:hunger",
+                      "amplifier": 2,
+                      "duration": 600
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "Haah?",
+                  "color": "light_purple",
+                  "italic": false
+                }
+              ],
+              "mode": "replace_all"
+            },
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "target": "custom_name",
+              "name": {
+                "text": "-Potion of Ella-",
+                "color": "light_purple",
+                "bold": true,
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:potion_contents": {
+                  "custom_color": 15688447,
+                  "custom_effects": [
+                    {
+                      "id": "minecraft:regeneration",
+                      "amplifier": 3,
+                      "duration": 100
+                    },
+                    {
+                      "id": "minecraft:blindness",
+                      "amplifier": 0,
+                      "duration": 140
+                    },
+                    {
+                      "id": "minecraft:nausea",
+                      "amplifier": 0,
+                      "duration": 140
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "target": "custom_name",
+              "name": {
+                "text": "-Potion of Dusean-",
+                "color": "yellow",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "Tastes like Sodium Chloride",
+                  "color": "white",
+                  "italic": false
+                }
+              ],
+              "mode": "replace_all"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:potion_contents": {
+                  "custom_color": 12764339,
+                  "custom_effects": [
+                    {
+                      "id": "minecraft:weakness",
+                      "amplifier": 4,
+                      "duration": 6000
+                    },
+                    {
+                      "id": "minecraft:slow_falling",
+                      "amplifier": 0,
+                      "duration": 6000
+                    },
+                    {
+                      "id": "minecraft:health_boost",
+                      "amplifier": 2,
+                      "duration": 6000
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -2,94 +2,107 @@
   "type": "minecraft:generic",
   "pools": [
     {
-      "rolls": 2,
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "sauceless_stuff:lootbox/sauce",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "rolls": 1,
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:enchanted_golden_apple"
+          "name": "minecraft:redstone_block",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 16
+            }
+          ]
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:diamond",
-          "weight": 2,
+          "name": "minecraft:observer",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 16
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:comparator",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 16
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:repeater",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 16
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:piston",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 24
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:sculk_sensor",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 16
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:crafter",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 16
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:dispenser",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 16
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:sponge",
           "functions": [
             {
               "function": "minecraft:set_count",
               "count": {
-                "min": 9,
-                "max": 12
-              }
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:golden_carrot",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": 48
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:totem_of_undying"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:lodestone",
-          "functions": [
-            {
-              "function": "minecraft:set_lore",
-              "entity": "this",
-              "lore": [
-                {
-                  "text": "\"9 out of 10, would recommend\" -Bad Ethan",
-                  "italic": false
-                }
-              ],
-              "mode": "replace_all"
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:panda_spawn_egg",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": 2
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:trident"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:experience_bottle",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": 64
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:wither_skeleton_skull"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:glowstone",
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 24,
-                "max": 32
+                "min": 3,
+                "max": 6
               }
             }
           ]

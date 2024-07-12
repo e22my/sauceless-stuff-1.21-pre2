@@ -2,11 +2,65 @@
   "type": "minecraft:generic",
   "pools": [
     {
-      "rolls": 4,
+      "rolls": 1,
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:diamond"
+          "name": "minecraft:diamond",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 16,
+                "max": 20
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:ominous_bottle",
+          "functions": [
+            {
+              "function": "minecraft:set_ominous_bottle_amplifier",
+              "amplifier": 4
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:emerald_block",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 16
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:book",
+          "functions": [
+            {
+              "function": "minecraft:set_enchantments",
+              "enchantments": {
+                "minecraft:unbreaking": 3,
+                "minecraft:mending": 1
+              },
+              "add": true
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:enchanted_golden_apple",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 3
+            }
+          ]
         }
       ]
     }

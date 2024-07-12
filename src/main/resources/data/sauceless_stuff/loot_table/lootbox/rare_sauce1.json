@@ -1,0 +1,134 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "sauceless_stuff:lootbox/rare_sauce",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:group",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:diamond_helmet",
+              "functions": [
+                {
+                  "function": "minecraft:enchant_with_levels",
+                  "levels": {
+                    "min": 20,
+                    "max": 30
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:diamond_chestplate",
+              "functions": [
+                {
+                  "function": "minecraft:enchant_with_levels",
+                  "levels": {
+                    "min": 20,
+                    "max": 30
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:group",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:diamond_boots",
+              "functions": [
+                {
+                  "function": "minecraft:enchant_with_levels",
+                  "levels": {
+                    "min": 20,
+                    "max": 30
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:diamond_leggings",
+              "functions": [
+                {
+                  "function": "minecraft:enchant_with_levels",
+                  "levels": {
+                    "min": 20,
+                    "max": 30
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:diamond_sword",
+          "functions": [
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": {
+                "min": 20,
+                "max": 30
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:diamond_pickaxe",
+          "functions": [
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": {
+                "min": 20,
+                "max": 30
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:diamond_axe",
+          "functions": [
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": {
+                "min": 20,
+                "max": 30
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:diamond_shovel",
+          "functions": [
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": {
+                "min": 20,
+                "max": 30
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

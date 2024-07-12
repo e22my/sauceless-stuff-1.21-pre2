@@ -18,6 +18,12 @@ public class ModItemGroups {
                         entries.add(ModItems.SAUCE);
                         entries.add(ModItems.RARE_SAUCE);
                         entries.add(ModItems.EPIC_SAUCE);
+
+//                        entries.add(ModItems.SUNRAKU);
+//                        entries.add(ModItems.KRICHIGO);
+//                        entries.add(ModItems.STEVE);
+//                        entries.add(ModItems.TARTAGLIA);
+//                        entries.add(ModItems.LOKI);
                     }).build());
     public static void registerItemGroup(){
         SaucelessStuff.LOGGER.info("Registering Item Groups for " + SaucelessStuff.MOD_ID);

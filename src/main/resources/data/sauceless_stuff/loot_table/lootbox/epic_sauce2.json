@@ -1,0 +1,182 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "sauceless_stuff:lootbox/epic_sauce1",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [{
+        "type": "minecraft:item",
+        "name": "minecraft:iron_nugget",
+        "functions": [
+          {
+            "function": "minecraft:set_name",
+            "entity": "this",
+            "name": {
+              "text": "Crystallized Eho",
+              "color": "aqua",
+              "italic": false
+            }
+          },
+          {
+            "function": "minecraft:set_attributes",
+            "modifiers": [
+              {
+                "id": "smol",
+                "attribute": "minecraft:generic.scale",
+                "amount": -0.4,
+                "operation": "add_multiplied_base",
+                "slot": "any"
+              },
+              {
+                "id": "sped",
+                "attribute": "minecraft:generic.movement_speed",
+                "amount": 0.15,
+                "operation": "add_multiplied_base",
+                "slot": "any"
+              },
+              {
+                "id": "less_health",
+                "attribute": "minecraft:generic.max_health",
+                "amount": -6,
+                "operation": "add_value",
+                "slot": "any"
+              }
+            ]
+          },
+          {
+            "function": "minecraft:set_lore",
+            "entity": "this",
+            "lore": [
+              {
+                "text": "Gain the powers of being 5ft tall",
+                "color": "white",
+                "italic": false
+              }
+            ],
+            "mode": "replace_all"
+          }
+        ]
+      },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:cake",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            },
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "target": "custom_name",
+              "name": {
+                "text": "The Cake",
+                "color": "red",
+                "bold": true,
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "It's just a really good cake",
+                  "color": "white",
+                  "italic": false
+                },
+                {
+                  "text": "\"Lol, get caked\" -Jordan",
+                  "color": "white",
+                  "italic": false
+                }
+              ],
+              "mode": "replace_all"
+            },
+            {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "id": "sneak",
+                  "attribute": "minecraft:player.entity_interaction_range",
+                  "amount": 5,
+                  "operation": "add_value",
+                  "slot": "mainhand"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:cod",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "target": "custom_name",
+              "name": {
+                "text": "Steven's Mermaid Bait",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "id": "fishmine",
+                  "attribute": "minecraft:player.submerged_mining_speed",
+                  "amount": 0.5,
+                  "operation": "add_value",
+                  "slot": "any"
+                },
+                {
+                  "id": "swim",
+                  "attribute": "minecraft:generic.water_movement_efficiency",
+                  "amount": 1,
+                  "operation": "add_value",
+                  "slot": "mainhand"
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "Now, you'll attract all the monster girls",
+                  "color": "dark_aqua",
+                  "italic": false
+                }
+              ],
+              "mode": "replace_all"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:elytra",
+          "functions": [
+            {
+              "function": "minecraft:set_enchantments",
+              "enchantments": {
+                "minecraft:unbreaking": 3,
+                "minecraft:mending": 1,
+                "minecraft:protection": 3
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

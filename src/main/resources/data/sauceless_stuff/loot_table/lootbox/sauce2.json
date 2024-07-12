@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "sauceless_stuff:lootbox/sauce1",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "sauceless_stuff:lootbox/rare_sauce1",
+          "weight": 5
+        }
+      ]
+    }
+  ]
+}

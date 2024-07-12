@@ -8,8 +8,7 @@
 		"e22my"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/e22my/sauceless-stuff-1.21-pre2"
 	},
 	"license": "MIT",
 	"icon": "assets/sauceless_stuff/icon.png",

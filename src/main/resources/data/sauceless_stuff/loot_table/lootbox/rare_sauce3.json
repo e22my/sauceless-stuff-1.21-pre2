@@ -1,0 +1,246 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "sauceless_stuff:lootbox/rare_sauce2",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:firework_rocket",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "target": "custom_name",
+              "name": {
+                "text": "Flight Rocket",
+                "color": "yellow",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:fireworks": {
+                  "flight_duration": 10,
+                  "explosions": []
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:amethyst_shard",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "target": "custom_name",
+              "name": {
+                "text": "Enderman Shard",
+                "color": "light_purple",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "Extends reach while in offhand",
+                  "italic": false
+                }
+              ],
+              "mode": "replace_all"
+            },
+            {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "id": "end_reach",
+                  "attribute": "minecraft:player.block_interaction_range",
+                  "amount": 2,
+                  "operation": "add_value",
+                  "slot": "offhand"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "target": "custom_name",
+              "name": {
+                "text": "-Potion of Cameron-",
+                "color": "aqua",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "Tastes like a fizzy-lifting drink",
+                  "color": "white",
+                  "italic": false
+                },
+                {
+                  "text": "Get thrown into the air!",
+                  "color": "white",
+                  "italic": false
+                },
+                {
+                  "text": "Feather falling not included",
+                  "color": "white",
+                  "italic": false
+                }
+              ],
+              "mode": "replace_all"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:potion_contents": {
+                  "custom_color": 3794943,
+                  "custom_effects": [
+                    {
+                      "id": "minecraft:levitation",
+                      "amplifier": 25,
+                      "duration": 20
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:potion",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "target": "custom_name",
+              "name": {
+                "text": "-Potion of ",
+                "color": "aqua",
+                "italic": false,
+                "extra": [
+                  {
+                    "text": "Jamaica's Internet-",
+                    "color": "red",
+                    "italic": false
+                  }
+                ]
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "Lawd Gaad, Beryl hit Minecraft",
+                  "color": "white",
+                  "italic": false
+                }
+              ],
+              "mode": "replace_all"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:potion_contents": {
+                  "custom_color": 1244184,
+                  "custom_effects": [
+                    {
+                      "id": "minecraft:slowness",
+                      "amplifier": 3,
+                      "duration": 140
+                    },
+                    {
+                      "id": "minecraft:mining_fatigue",
+                      "amplifier": 3,
+                      "duration": 140
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:shield",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "target": "custom_name",
+              "name": {
+                "text": "Shield of Che",
+                "color": "red",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "id": "speedincrease",
+                  "attribute": "minecraft:generic.movement_speed",
+                  "amount": 0.2,
+                  "operation": "add_multiplied_base",
+                  "slot": "offhand"
+                },
+                {
+                  "id": "reducearmor",
+                  "attribute": "minecraft:generic.armor",
+                  "amount": -1,
+                  "operation": "add_value",
+                  "slot": "offhand"
+                },
+                {
+                  "id": "reducearmortoughness",
+                  "attribute": "minecraft:generic.armor_toughness",
+                  "amount": -1,
+                  "operation": "add_value",
+                  "slot": "offhand"
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "I'm fast as fuck, boiii",
+                  "color": "light_purple",
+                  "italic": false
+                }
+              ],
+              "mode": "replace_all"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

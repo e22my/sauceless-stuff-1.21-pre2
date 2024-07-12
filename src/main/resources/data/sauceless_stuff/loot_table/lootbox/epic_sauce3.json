@@ -1,0 +1,503 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "sauceless_stuff:lootbox/epic_sauce1",
+          "weight": 1
+        }
+      ]
+    },{
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_nugget",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": {
+                "text": "Crystallized Eho",
+                "color": "aqua",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "id": "smol",
+                  "attribute": "minecraft:generic.scale",
+                  "amount": -0.4,
+                  "operation": "add_multiplied_base",
+                  "slot": "any"
+                },
+                {
+                  "id": "sped",
+                  "attribute": "minecraft:generic.movement_speed",
+                  "amount": 0.15,
+                  "operation": "add_multiplied_base",
+                  "slot": "any"
+                },
+                {
+                  "id": "lesshealth",
+                  "attribute": "minecraft:generic.max_health",
+                  "amount": -6,
+                  "operation": "add_value",
+                  "slot": "any"
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "Gain the powers of being 5ft tall",
+                  "color": "white",
+                  "italic": false
+                }
+              ],
+              "mode": "replace_all"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:cake",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            },
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "target": "custom_name",
+              "name": {
+                "text": "The Cake",
+                "color": "red",
+                "bold": true,
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "It's just a really good cake",
+                  "color": "white",
+                  "italic": false
+                },
+                {
+                  "text": "\"Lol, get caked\" -Jordan",
+                  "color": "white",
+                  "italic": false
+                }
+              ],
+              "mode": "replace_all"
+            },
+            {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "id": "sneak",
+                  "attribute": "minecraft:player.entity_interaction_range",
+                  "amount": 5,
+                  "operation": "add_value",
+                  "slot": "mainhand"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:cod",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "target": "custom_name",
+              "name": {
+                "text": "Steven's Mermaid Bait",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "id": "fishmine",
+                  "attribute": "minecraft:player.submerged_mining_speed",
+                  "amount": 0.5,
+                  "operation": "add_value",
+                  "slot": "any"
+                },
+                {
+                  "id": "swim",
+                  "attribute": "minecraft:generic.water_movement_efficiency",
+                  "amount": 1,
+                  "operation": "add_value",
+                  "slot": "mainhand"
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "Now, you'll attract all the monster girls",
+                  "color": "dark_aqua",
+                  "italic": false
+                }
+              ],
+              "mode": "replace_all"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:elytra",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_enchantments",
+              "enchantments": {
+                "minecraft:unbreaking": 3,
+                "minecraft:mending": 1,
+                "minecraft:protection": 5
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:breeze_rod",
+          "functions": [
+            {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "id": "scale",
+                  "attribute": "minecraft:generic.scale",
+                  "amount": 5,
+                  "operation": "add_value",
+                  "slot": "offhand"
+                },
+                {
+                  "id": "step",
+                  "attribute": "minecraft:generic.step_height",
+                  "amount": 1,
+                  "operation": "add_value",
+                  "slot": "offhand"
+                },
+                {
+                  "id": "fall",
+                  "attribute": "minecraft:generic.safe_fall_distance",
+                  "amount": 15,
+                  "operation": "add_value",
+                  "slot": "offhand"
+                },
+                {
+                  "id": "speed",
+                  "attribute": "minecraft:generic.movement_speed",
+                  "amount": 0.2,
+                  "operation": "add_multiplied_base",
+                  "slot": "offhand"
+                },
+                {
+                  "id": "gravity",
+                  "attribute": "minecraft:generic.gravity",
+                  "amount": -0.3,
+                  "operation": "add_multiplied_base",
+                  "slot": "offhand"
+                },
+                {
+                  "id": "blockrange",
+                  "attribute": "minecraft:player.block_interaction_range",
+                  "amount": 7,
+                  "operation": "add_value",
+                  "slot": "offhand"
+                },
+                {
+                  "id": "entityrange",
+                  "attribute": "minecraft:player.entity_interaction_range",
+                  "amount": 7,
+                  "operation": "add_value",
+                  "slot": "offhand"
+                },
+                {
+                  "id": "jump",
+                  "attribute": "minecraft:generic.jump_strength",
+                  "amount": 0.5,
+                  "operation": "add_value",
+                  "slot": "offhand"
+                },
+                {
+                  "id": "attackspd",
+                  "attribute": "minecraft:generic.attack_speed",
+                  "amount": -0.5,
+                  "operation": "add_value",
+                  "slot": "offhand"
+                },
+                {
+                  "id": "damage",
+                  "attribute": "minecraft:generic.attack_damage",
+                  "amount": 0.3,
+                  "operation": "add_multiplied_base",
+                  "slot": "offhand"
+                }
+              ]
+            },
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "target": "custom_name",
+              "name": {
+                "text": "Bad Ethan's Beta Capsule",
+                "color": "red",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "Become the size of Ultraman",
+                  "color": "white",
+                  "italic": false
+                }
+              ],
+              "mode": "replace_all"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:turtle_helmet",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "target": "custom_name",
+              "name": {
+                "text": "Kamen Rider Helmet",
+                "color": "green",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "Good Ethan says to watch Kamen Rider",
+                  "italic": false
+                }
+              ],
+              "mode": "replace_all"
+            },
+            {
+              "function": "minecraft:set_enchantments",
+              "enchantments": {
+                "minecraft:unbreaking": 10,
+                "minecraft:protection": 5
+              },
+              "add": true
+            },
+            {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "id": "fall",
+                  "attribute": "minecraft:generic.safe_fall_distance",
+                  "amount": 15,
+                  "operation": "add_value",
+                  "slot": [
+                    "head"
+                  ]
+                },
+                {
+                  "id": "speed",
+                  "attribute": "minecraft:generic.movement_speed",
+                  "amount": 0.2,
+                  "operation": "add_multiplied_base",
+                  "slot": "head"
+                },
+                {
+                  "id": "gravity",
+                  "attribute": "minecraft:generic.gravity",
+                  "amount": -0.5,
+                  "operation": "add_multiplied_base",
+                  "slot": "head"
+                },
+                {
+                  "id": "jump",
+                  "attribute": "minecraft:generic.jump_strength",
+                  "amount": 0.2,
+                  "operation": "add_value",
+                  "slot": "head"
+                },
+                {
+                  "id": "damage",
+                  "attribute": "minecraft:generic.attack_damage",
+                  "amount": 0.1,
+                  "operation": "add_multiplied_base",
+                  "slot": "head"
+                },
+                {
+                  "id": "atkspeed",
+                  "attribute": "minecraft:generic.attack_speed",
+                  "amount": 0.1,
+                  "operation": "add_multiplied_base",
+                  "slot": "head"
+                },
+                {
+                  "id": "riderjump",
+                  "attribute": "minecraft:generic.jump_strength",
+                  "amount": 0.7,
+                  "operation": "add_value",
+                  "slot": "offhand"
+                },
+                {
+                  "id": "riderjumpprot",
+                  "attribute": "minecraft:generic.fall_damage_multiplier",
+                  "amount": -1,
+                  "operation": "add_value",
+                  "slot": "offhand"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:cobweb",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "target": "custom_name",
+              "name": {
+                "text": "Remains of Glenroy's House",
+                "color": "gray",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "My house...",
+                  "italic": false
+                }
+              ],
+              "mode": "replace_all"
+            },
+            {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "id": "fall",
+                  "attribute": "minecraft:generic.fall_damage_multiplier",
+                  "amount": -1,
+                  "operation": "add_value",
+                  "slot": "hand"
+                },
+                {
+                  "id": "burn",
+                  "attribute": "minecraft:generic.burning_time",
+                  "amount": -1,
+                  "operation": "add_value",
+                  "slot": "hand"
+                },
+                {
+                  "id": "sweep",
+                  "attribute": "minecraft:player.sweeping_damage_ratio",
+                  "amount": 1,
+                  "operation": "add_value",
+                  "slot": "hand"
+                },
+                {
+                  "id": "sneak",
+                  "attribute": "minecraft:player.sneaking_speed",
+                  "amount": 1,
+                  "operation": "add_value",
+                  "slot": "hand"
+                },
+                {
+                  "id": "health",
+                  "attribute": "minecraft:generic.max_health",
+                  "amount": 0.5,
+                  "operation": "add_multiplied_base",
+                  "slot": "hand"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:nether_star",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 3
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:paper",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "target": "custom_name",
+              "name": {
+                "text": "I.O.U.",
+                "color": "dark_red",
+                "italic": false
+              }
+            },
+            {
+              "function": "minecraft:set_lore",
+              "entity": "this",
+              "lore": [
+                {
+                  "text": "Good Ethan ran out of ideas and so...",
+                  "color": "white",
+                  "italic": false
+                },
+                {
+                  "text": "If you got this item, give it to Good Ethan",
+                  "color": "white",
+                  "italic": false
+                },
+                {
+                  "text": "He will grant you one wish within reason",
+                  "color": "white",
+                  "italic": false
+                }
+              ],
+              "mode": "replace_all"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

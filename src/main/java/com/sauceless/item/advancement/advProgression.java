@@ -42,11 +42,4 @@ public class advProgression {
             "husbandry/kill_axolotl_target",
             "husbandry/whole_pack",
     };
-    public String[] lock = {
-            "nether/uneasy_alliance",
-            "nether/netherite_armor",
-            "nether/ride_strider_in_overworld_lava",
-            "nether/explore_nether",
-            "nether/all_potions",
-    };
 }

@@ -1,6 +1,9 @@
 package com.sauceless.item.lootbox;
 
+import com.sauceless.SaucelessStuff;
+import com.sauceless.item.advancement.advancementHandler;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
+import net.minecraft.advancement.AdvancementProgress;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -27,12 +30,13 @@ public class LootboxItem extends Item {
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand){
         ItemStack itemStack = user.getStackInHand(hand);
+        advancementHandler handler = new advancementHandler();
         if (!world.isClient() && user instanceof ServerPlayerEntity){
+            handler.advancementProgress((ServerPlayerEntity) user);
             open(user);
             if (!user.isCreative()){
                 itemStack.decrement(1);
                 user.getItemCooldownManager().set(this, 40);
-                user.playSoundToPlayer(SoundEvent.of(Identifier.of("block.note_block.harp")), SoundCategory.NEUTRAL, 1f, 1.414214f);
             }
             return TypedActionResult.consume(itemStack);
         }
@@ -51,6 +55,13 @@ public class LootboxItem extends Item {
         }
         if (type != LootType.COMMON){
             lootboxMsg.broadcastMessage((ServerPlayerEntity) player, type);
+            if (type == LootType.EPIC){
+                player.playSoundToPlayer(SaucelessStuff.EPIC_SOUND, SoundCategory.MASTER, 0.85f, 1f);
+            } else {
+                player.playSoundToPlayer(SaucelessStuff.RARE_SOUND, SoundCategory.MASTER, 0.85f, 1f);
+            }
+        } else {
+            player.playSoundToPlayer(SaucelessStuff.COMMON_SOUND, SoundCategory.MASTER, 0.85f, 1f);
         }
     }
 
